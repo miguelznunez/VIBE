@@ -10,3 +10,26 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }))
+
+document.querySelector("#pricing").addEventListener("click", () => {
+  document.querySelector(".modal-wrapper").style.display = "block";
+})
+
+document.querySelector("#close-modal").addEventListener("click", () => {
+  document.querySelector(".modal-wrapper").style.display = "none";
+})
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}

@@ -11,6 +11,7 @@
 
 html{
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 header{
@@ -32,11 +33,103 @@ body{
   overflow-x: hidden;
 }
 
+
 .container{
   width: 1280px;
   margin: auto; 
-  /* border: 1px solid black; */
 }
+
+.modal-wrapper{
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.modal{
+  position: absolute;
+  left: calc(50% - 400px);
+  top: calc(50% - 200px);
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  display: flex;   
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+/* Width */
+.modal::-webkit-scrollbar {
+  width: 22px;
+ 
+}
+
+/* Track */
+.modal::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+ 
+/* Handle */
+.modal::-webkit-scrollbar-thumb {
+  background: #bfbfbf; 
+}
+
+/* Handle on hover */
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a; 
+}
+
+.close-modal{
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  cursor: pointer;
+  color: white;
+}
+
+.pricing-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-header{
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  background-color: #1a1a1a;
+}
+
+.pricing-subheader{
+  padding: 10px 20px;
+  color: white;
+  background-color: gray;
+}
+
+.pricing-details{
+  padding: 10px 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-details:nth-child(3), .pricing-details:nth-child(5), .pricing-details:nth-child(7),
+.pricing-details:nth-child(9), .pricing-details:nth-child(11), .pricing-details:nth-child(13),
+.pricing-details:nth-child(15), .pricing-details:nth-child(17), .pricing-details:nth-child(19),
+.pricing-details:nth-child(21), .pricing-details:nth-child(23), .pricing-details:nth-child(25),
+.pricing-details:nth-child(27), .pricing-details:nth-child(29), .pricing-details:nth-child(31),
+.pricing-details:nth-child(33), .pricing-details:nth-child(35){
+  background-color: whitesmoke;
+}
+
+
 
 #header{
   background-color: white;
@@ -104,7 +197,7 @@ body{
   transition: all 0.3s ease;
 }
 
-.showcase, .specials{
+.showcase, #specials{
   background-position: center;
   background-size: cover;
   background-image: url(/img/de.jpeg);
@@ -120,13 +213,13 @@ body{
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), transparent);
 }
 
-.specials{
+#specials{
   min-height: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-position: center;
-  background-image: url(/img/oth.jpeg);
+  background-image: url(/img/y.jpeg);
 }
 
 .showcase-container{
@@ -137,19 +230,31 @@ body{
   position: relative;
 }
 
-.showcase-text{
+.showcase-text-1{
   position: absolute;
   left: 0;
   top: 28%;
 }
 
-.showcase-text h1{
+.showcase-text-1 h1{
   font-size: 9rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
   letter-spacing: 4px;
-  /* border: 1px solid black; */
 }
+
+.showcase-text-2{
+  position: absolute;
+  left: 2%;
+  top: 46%;
+}
+
+/* .showcase-text-2 h1{
+  font-size: 9rem;
+  font-family: 'Carattere', cursive;
+  font-style: italic;
+  letter-spacing: 4px;
+} */
 
 .fade {
   -webkit-animation-name: fade;
@@ -196,7 +301,7 @@ body{
   flex-direction: column;
   gap: 50px;
 
-  color: #1a1a1a;
+  color: black;
 }
 
 .service-box h1{
@@ -208,7 +313,7 @@ body{
 }
 
 .brows{
-  background-color: lightyellow;
+  background-color:peachpuff;
 }
 
 .brows-img, .waxes-img, .sugaring-img, .lashes-img{
@@ -230,18 +335,26 @@ body{
 }
 .waxes{
   color: white;
-  background-color: #1a1a1a;
+  background-color: black;
 }
 
 .lashes{
-  background-color:lightyellow;
+  background-color: peachpuff;
+}
+
+.service-learn-more{
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .specials-container{
   width: 600px;
   min-height: 600px;
   margin: auto;
-  background-color: #1a1a1a;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +373,7 @@ body{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
 }
 
@@ -275,9 +388,9 @@ body{
   text-align: center;
 }
 
-.testimonials, .instagram{
+#testimonials, .instagram{
   min-height: 500px;
-  background-color: #1a1a1a;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +398,7 @@ body{
 
 .instagram{
   color: white;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .testimonials-container, .instagram-container{
@@ -305,10 +418,11 @@ body{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
   color: white;
 }
+
 
 .instagram button{
   border: 1px solid lightgray;
@@ -379,7 +493,8 @@ body{
 }
 
 .instagram-follow{
-  color: #1a1a1a;
+  color: black;
+  letter-spacing: 1px;
 }
 
 i{
@@ -395,9 +510,12 @@ i{
   color: white;
 }
 
-.products{
+#products{
   height: auto;
-  background-color: white;
+    background: #FFFFFF;
+background: -webkit-radial-gradient(center, #FFFFFF, #FFDAB9);
+background: -moz-radial-gradient(center, #FFFFFF, #FFDAB9);
+background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
 }
 
 .products-container{
@@ -408,13 +526,14 @@ i{
   gap: 10px;
   justify-content: space-between;
   padding: 30px 0;
+
 }
 
 .products-header h1{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
 }
 
@@ -428,6 +547,8 @@ i{
 .product-box{
   width: 320px;
   min-height: 300px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .product-box button{
@@ -435,13 +556,16 @@ i{
   border: 1px solid lightgray;
   padding: 8px;
   color: white;
-  background-color: #1a1a1a;
+  font-family: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: black;
 }
 
 .product-img{
   width: 100%;
   height: 250px;
-  background-color: lightyellow;
+  border: 1px solid lightgray;
 }
 
 .product-description{
@@ -453,12 +577,13 @@ i{
   gap: 5px;
 }
 
-.about{
+#about{
   min-height: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: black;
+
   color: white;
   
 }
@@ -478,7 +603,7 @@ i{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
   color: white;
 }
@@ -493,7 +618,7 @@ i{
 .about-img{
   width: 500px;
   height: 450px;
-    background-position: center;
+  background-position: center;
   background-size: cover;
   background-image: url(/img/dra.jpeg);
   position: relative;
@@ -504,7 +629,7 @@ i{
   content: '';
   right: 30px;
   top: -30px;
-  border: 10px solid rgba(255, 255, 224, 0.83);
+  border: 10px solid peachpuff;
   width: 100%;
   height: 100%;
 }
@@ -522,24 +647,55 @@ i{
   letter-spacing: 1;
 }
 
-.faqs{
-  height: auto;
+#book{
+  min-height: 150px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.book-today{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-today button{
+  padding: 12px;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 275px;
+  cursor: pointer;
+  background-color: peachpuff;
+}
+
+#faqs{
+  min-height: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
   position: relative;
-  background-position: center;
+    background-position: center;
   background-size: cover;
-  background-image: url(/img/wqr.jpeg);
+   background-attachment: fixed;
+  background-image: url(/img/pe.jpeg);
   background-attachment: fixed;
 }
 
-.accordion{
+.accordion-container{
   width: 80%;
+  height: 700px;
   margin: auto;
   display: flex;
-  gap: 10px;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 
@@ -547,98 +703,88 @@ i{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
-  color: #1a1a1a;
-}
-
-.accordion-item{
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  /* padding: 5px; */
-  background-color:white;
-}
-
-.accordion-link{
-  font-size: 1.6rem;
   color: white;
-  text-decoration: none;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color:rgba(0, 0, 0, 0.8);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #1a1a1a;
-  border-radius: 5px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: inherit;
+  font-size: 1.2rem;
 }
 
-.accordion-link i{
-  color: #e7d5ff;
-  padding: .5rem;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  color: black;
+    background-color: peachpuff;
 }
 
-.accordion-link .fa-minus{
-  display: none;
-}
-
-.answer{
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  color: white;
+  background-color:rgba(0, 0, 0, 0.8);
   max-height: 0;
   overflow: hidden;
-  position: relative;
-  /* transition: max-height 650ms; */
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: max-height 0.2s ease-out;
 }
 
-.answer::before{
-  content: "";
-  position: absolute;
-  width: .6rem;
-  height: 90%;
-  background-color: #1a1a1a;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 12px;
+  float: right;
+  margin-left: 5px;
 }
 
-.answer p{
-  font-size: 1.4rem;
-  padding: 2rem;
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-.accordion-item:target .answer{
-  max-height: 20rem;
+#contact{
+  min-height: 720px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container{
+  width: 80%;
+  margin: auto;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.accordion-item:target .accordion-link .fa-plus{
-  display: none;
+.contact-box{
+  width: 550px;
+  height: 550px;
+  border: 1px solid white;
 }
 
-.accordion-item:target .accordion-link .fa-minus{
-  display: block;
+.address{
+  background-color: black;
 }
 
-/* .img-box-1{
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  bottom: 10%;
-  left: 8%;
-  background-position: center;
-  background-size: cover;
-  background-image: url(/img/dra.jpeg);
+.map{
+  background-color: white;
 }
-
-.img-box-2{
-  width: 250px;
-  height: 350px;
-  top: 5%;
-  right: 10%;
-  position: absolute;
-    background-position: center;
-  background-size: cover;
-  background-image: url(/img/dra2.jpeg);
-} */
-
+#footer{
+  min-height: 200px;
+  background-color:black;
+}
 
 @media(max-width:768px){
   .hamburger{
