@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 *,
 *::before,
 *::after{
@@ -33,104 +34,12 @@ body{
   overflow-x: hidden;
 }
 
-
 .container{
   width: 1280px;
   margin: auto; 
 }
 
-.modal-wrapper{
-  display: none;
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  min-height: 100vh;
-  overflow-y: scroll;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-}
-
-.modal{
-  position: absolute;
-  left: calc(50% - 400px);
-  top: calc(50% - 200px);
-  width: 800px;
-  height: 400px;
-  background-color: white;
-  display: flex;   
-  flex-wrap: wrap;
-  overflow-y: scroll;
-  border-radius: 5px;
-}
-
-/* Width */
-.modal::-webkit-scrollbar {
-  width: 22px;
- 
-}
-
-/* Track */
-.modal::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
- 
-/* Handle */
-.modal::-webkit-scrollbar-thumb {
-  background: #bfbfbf; 
-}
-
-/* Handle on hover */
-.modal::-webkit-scrollbar-thumb:hover {
-  background: #1a1a1a; 
-}
-
-.close-modal{
-  position: absolute;
-  top: 4%;
-  right: 3%;
-  cursor: pointer;
-  color: white;
-}
-
-.pricing-box{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.pricing-header{
-  padding: 15px;
-  color: white;
-  font-weight: bold;
-  background-color: #1a1a1a;
-}
-
-.pricing-subheader{
-  padding: 10px 20px;
-  color: white;
-  background-color: gray;
-}
-
-.pricing-details{
-  padding: 10px 35px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.pricing-details:nth-child(3), .pricing-details:nth-child(5), .pricing-details:nth-child(7),
-.pricing-details:nth-child(9), .pricing-details:nth-child(11), .pricing-details:nth-child(13),
-.pricing-details:nth-child(15), .pricing-details:nth-child(17), .pricing-details:nth-child(19),
-.pricing-details:nth-child(21), .pricing-details:nth-child(23), .pricing-details:nth-child(25),
-.pricing-details:nth-child(27), .pricing-details:nth-child(29), .pricing-details:nth-child(31),
-.pricing-details:nth-child(33), .pricing-details:nth-child(35){
-  background-color: whitesmoke;
-}
-
-
-
+/* HEADER / NAVIGATION */
 #header{
   background-color: white;
 }
@@ -143,7 +52,6 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
-  /* border: 1px solid black; */
 }
 
 .nav-menu{
@@ -167,8 +75,7 @@ body{
   width: 35px;
   padding: 8px;
   text-align: center;
-
-  background-color: #1a1a1a;
+  background-color: black;
 }
 
 .nav-branding{
@@ -180,7 +87,7 @@ body{
 }
 
 .nav-link:hover{
-  color: dodgerblue;
+  color: lightgray;
 }
 
 .hamburger{
@@ -197,10 +104,11 @@ body{
   transition: all 0.3s ease;
 }
 
-.showcase, #specials{
+/* HOME / SHOWCASE */
+.showcase{
   background-position: center;
   background-size: cover;
-  background-image: url(/img/de.jpeg);
+  background-image: url(/img/er.jpeg);
   background-attachment: fixed;
   color: white;   
   position: relative;
@@ -211,15 +119,6 @@ body{
   width: 100%;
   height: 720px;
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), transparent);
-}
-
-#specials{
-  min-height: 720px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-image: url(/img/y.jpeg);
 }
 
 .showcase-container{
@@ -247,14 +146,8 @@ body{
   position: absolute;
   left: 2%;
   top: 46%;
+  
 }
-
-/* .showcase-text-2 h1{
-  font-size: 9rem;
-  font-family: 'Carattere', cursive;
-  font-style: italic;
-  letter-spacing: 4px;
-} */
 
 .fade {
   -webkit-animation-name: fade;
@@ -273,7 +166,7 @@ body{
   to {opacity: 1}
 }
 
-
+/* SERVICES */
 .services{
   width: 80%;
   margin: auto;
@@ -285,7 +178,6 @@ body{
   display: flex;
   flex-direction: column;
   margin-top: -125px;
-
 }
 
 .services-group{
@@ -300,7 +192,6 @@ body{
   align-items: center;
   flex-direction: column;
   gap: 50px;
-
   color: black;
 }
 
@@ -313,33 +204,53 @@ body{
 }
 
 .brows{
-  background-color:peachpuff;
+  background-color:lightyellow;
 }
 
 .brows-img, .waxes-img, .sugaring-img, .lashes-img{
   background-position: center;
   background-size: cover;
-  background-image: url(/img/brow.jpeg);
+  background-image: url(/img/we.jpeg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.brows-img:hover, .waxes-img:hover, .sugaring-img:hover, .lashes-img:hover{
+  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.brows-img p, .waxes-img p, .sugaring-img p, .lashes-img p{
+  opacity: 0;
+  transform: scale(0);
+  transition: .8s;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.brows-img:hover p, .waxes-img:hover p, .sugaring-img:hover p, .lashes-img:hover p{
+  opacity: 1;
+  transform: scale(1);
 }
 
 .waxes-img{
-  background-image: url(/img/waxing.jpeg);
+  background-image: url(/img/eg.jpeg);
 }
 
 .sugaring-img{
-  background-image: url(/img/sugaring.jpeg);
+  background-image: url(/img/bu.jpeg);
 }
 
 .lashes-img{
-  background-image: url(img/lashes.jpeg);
+  background-image: url(img/ey.jpeg);
 }
+
 .waxes{
   color: white;
   background-color: black;
 }
 
 .lashes{
-  background-color: peachpuff;
+  background-color: lightyellow;
 }
 
 .service-learn-more{
@@ -350,31 +261,57 @@ body{
   cursor: pointer;
 }
 
-.specials-container{
-  width: 600px;
-  min-height: 600px;
+/* PRICING */
+#pricing{
+  color: white;
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.1)), url(/img/oth.jpeg);
+}
+
+.pricing-container{
+  width: 80%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-box{
+  width: 330px;
+  height: 600px;
+  border-radius: 5px;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
 }
 
-.specials-text{
-  width: 70%;
+.middle{
+  color: black;
+  background-color: white;
+}
+
+.pricing-details{
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.specials-header h1{
+.pricing-header h1{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
   letter-spacing: 3px;
   text-align: center;
+  
 }
 
 .item{
@@ -384,10 +321,28 @@ body{
   justify-content: space-between;
 }
 
-.specials-booking{
-  text-align: center;
+.item h1{
+  font-weight: 100;
 }
 
+.white h1{
+  font-weight: bold;
+}
+
+.pricing-booking{
+  text-align: center;
+  
+}
+
+.pricing-booking a{
+  color: white;
+}
+
+.center a{
+  color: black;
+}
+
+/* TESTIMONIALS */
 #testimonials, .instagram{
   min-height: 500px;
   background-color: black;
@@ -464,19 +419,23 @@ body{
   letter-spacing: 1;
 }
 
+.testimonial-box q{
+  font-weight: 100;
+}
+
 .instagram-box{
   width: 200px;
   height: 200px;
   border-radius: 5px;
 }
 .one, .two, .three, .four, .five{
-  /* border: 5px solid white; */
-  background-position: center;
+  border: 1px solid lightgray;
+  /* background-position: center;
   background-size: cover;
-  background-image: url(/img/1.jpeg);
+  background-image: url(/img/1.jpeg); */
 }
 
-.two{
+/* .two{
   background-image: url(/img/2.jpeg);
 }
 
@@ -489,8 +448,8 @@ body{
 }
 
 .five{
-  background-image: url(/img/5.jpeg);
-}
+  background-image: url(/img/ba.jpeg);
+} */
 
 .instagram-follow{
   color: black;
@@ -512,10 +471,10 @@ i{
 
 #products{
   height: auto;
-    background: #FFFFFF;
-background: -webkit-radial-gradient(center, #FFFFFF, #FFDAB9);
-background: -moz-radial-gradient(center, #FFFFFF, #FFDAB9);
-background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
+  background: #FFFFFF;
+background: -webkit-radial-gradient(center, #FFFFFF, #FFFFE0);
+background: -moz-radial-gradient(center, #FFFFFF, #FFFFE0);
+background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 }
 
 .products-container{
@@ -577,6 +536,10 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
   gap: 5px;
 }
 
+/* .product-description p{
+  font-weight: 600;
+} */
+
 #about{
   min-height: 720px;
   display: flex;
@@ -618,9 +581,10 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
 .about-img{
   width: 500px;
   height: 450px;
-  background-position: center;
-  background-size: cover;
-  background-image: url(/img/dra.jpeg);
+  border: 1px solid white;
+  /* background-position: center;
+  background-size: cover; */
+  /* background-image: url(/img/dra.jpeg); */
   position: relative;
 }
 
@@ -629,7 +593,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
   content: '';
   right: 30px;
   top: -30px;
-  border: 10px solid peachpuff;
+  border: 10px solid lightyellow;
   width: 100%;
   height: 100%;
 }
@@ -645,6 +609,10 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 1;
+}
+
+.info p{
+  font-weight: 100;
 }
 
 #book{
@@ -669,11 +637,11 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
   font-size: 1.2rem;
   font-weight: bold;
   font-family: inherit;
-  border: 1px solid transparent;
+  border: 2px solid lightgray;
   border-radius: 20px;
   width: 275px;
   cursor: pointer;
-  background-color: peachpuff;
+  background-color: lightyellow;
 }
 
 #faqs{
@@ -686,7 +654,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
     background-position: center;
   background-size: cover;
    background-attachment: fixed;
-  background-image: url(/img/pe.jpeg);
+  background-image: url(/img/34.jpeg);
   background-attachment: fixed;
 }
 
@@ -712,7 +680,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
 .accordion {
   background-color:rgba(0, 0, 0, 0.8);
   color: white;
-  font-weight: bold;
+  font-weight: 100;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -722,12 +690,13 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
   transition: 0.4s;
   font-family: inherit;
   font-size: 1.2rem;
+  border-radius: 5px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   color: black;
-    background-color: peachpuff;
+    background-color: lightyellow;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -738,6 +707,10 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.panel p{
+  font-weight: 100;
 }
 
 .accordion:after {
@@ -753,8 +726,6 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
 
 #contact{
   min-height: 720px;
-  background-color: white;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -762,28 +733,96 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFDAB9);
 .contact-container{
   width: 80%;
   margin: auto;
-  border: 1px solid white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .contact-box{
   width: 550px;
-  height: 550px;
-  border: 1px solid white;
+  height: 600px;
+  color: white;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
 }
 
-.address{
-  background-color: black;
+.contact-box h3{
+  font-weight: 100;
+}
+
+.business-address{
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+
+.business-img{
+  width: 90%;
+  margin: auto;
+  height: 300px;
+  border: 1px solid white;
+  background-position: center;
+  background-size: cover;
+  /* background-image: url(https://images.pexels.com/photos/776938/pexels-photo-776938.jpeg?cs=srgb&dl=pexels-daria-shevtsova-776938.jpg&fm=jpg) ; */
 }
 
 .map{
   background-color: white;
 }
+
 #footer{
-  min-height: 200px;
+  min-height: 300px;
   background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.footer-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.footer-header{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.footer-links{
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.footer-social{
+  display: flex;
+  gap: 25px;
+}
+
+.footer-copyright, .fa-copyright{
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+
+.footer-copyright{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-container a{
+  color: white;
 }
 
 @media(max-width:768px){
