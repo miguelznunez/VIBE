@@ -888,6 +888,7 @@ i{
 }
 
 #footer{
+  width: 100%;
   min-height: 300px;
   background-color:black;
   display: flex;
