@@ -39,6 +39,88 @@ body{
   margin: auto; 
 }
 
+.modal-wrapper{
+  opacity: 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+/* ADJUST WIDTH AND HEIGHT ACCORDINGLY */
+.modal{
+  position: absolute;
+  width: 600px;
+  left: calc(50% - 300px);
+  height: 350px;
+  top: calc(50% - 175px);
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/image0.jpeg);
+}
+
+.modal-message{
+  position: absolute;
+  bottom: 10%;
+  left: 22%;
+}
+
+#code{
+  font-weight: bold;
+}
+
+/* x-icon */
+.close-modal{
+  font-size: 2rem;
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.hideModal{
+  z-index:-1;
+  opacity:0;
+  animation: hide .25s;
+  transform: scale(0);
+}
+
+@keyframes hide {
+  from{
+    z-index:2;
+    transform: scale(1);
+    opacity:1;
+  }
+  to{
+    z-index:-1;
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.showModal{
+  opacity:1;
+  z-index:2;
+  animation: show .2s;
+  transform: scale(1);
+}
+
+@keyframes show {
+  from{
+    transform: scale(0);
+    opacity:0;
+    z-index:-1;
+  } 
+  to{
+    transform: scale(1);
+    opacity: 1;
+    z-index:2;
+  }
+}
+
 /* HEADER / NAVIGATION */
 #header{
   background-color: white;
@@ -118,7 +200,7 @@ body{
 .showcase-overlay{
   width: 100%;
   height: 720px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), transparent);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .showcase-container{
@@ -193,6 +275,7 @@ body{
   flex-direction: column;
   gap: 50px;
   color: black;
+
 }
 
 .service-box h1{
@@ -290,6 +373,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
 .middle{
@@ -427,13 +511,13 @@ body{
   width: 200px;
   height: 200px;
   border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
-.one, .two, .three, .four, .five{
-  border: 1px solid lightgray;
-  /* background-position: center;
+/* .one, .two, .three, .four, .five{
+  background-position: center;
   background-size: cover;
-  background-image: url(/img/1.jpeg); */
-}
+  background-image: url(/img/1.jpeg);
+} */
 
 /* .two{
   background-image: url(/img/2.jpeg);
@@ -508,23 +592,25 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   min-height: 300px;
   font-size: 1.2rem;
   font-weight: 600;
+  
 }
 
 .product-box button{
   border-radius: 5px;
-  border: 1px solid lightgray;
-  padding: 8px;
+  border: 1px solid black;
+  padding: 9px;
   color: white;
   font-family: inherit;
   font-size: 1.2rem;
   cursor: pointer;
   background-color: black;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
 .product-img{
   width: 100%;
   height: 250px;
-  border: 1px solid lightgray;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
 .product-description{
@@ -586,6 +672,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   background-size: cover; */
   /* background-image: url(/img/dra.jpeg); */
   position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
 .about-img::before{
@@ -637,11 +724,12 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   font-size: 1.2rem;
   font-weight: bold;
   font-family: inherit;
-  border: 2px solid lightgray;
+  border: 3px solid black;
   border-radius: 20px;
   width: 275px;
   cursor: pointer;
   background-color: lightyellow;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
 #faqs{
@@ -651,9 +739,8 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   align-items: center;
   padding: 20px 0;
   position: relative;
-    background-position: center;
+  background-position: center;
   background-size: cover;
-   background-attachment: fixed;
   background-image: url(/img/34.jpeg);
   background-attachment: fixed;
 }
@@ -667,18 +754,17 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   flex-direction: column;
 }
 
-.faq-header h1{
+/* .faq-header h1{
   font-size: 4rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
   letter-spacing: 3px;
   text-align: center;
   color: white;
-}
+} */
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color:rgba(0, 0, 0, 0.8);
   color: white;
   font-weight: 100;
   cursor: pointer;
@@ -691,6 +777,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   font-family: inherit;
   font-size: 1.2rem;
   border-radius: 5px;
+  background-color:rgba(0, 0, 0, 0.8);
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

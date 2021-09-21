@@ -11,15 +11,15 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   navMenu.classList.remove("active");
 }))
 
-document.querySelector("#pricing").addEventListener("click", () => {
-  document.querySelector(".modal-wrapper").style.display = "block";
-})
+// document.querySelector("#pricing").addEventListener("click", () => {
+//   document.querySelector(".modal-wrapper").style.display = "block";
+// })
 
-document.querySelector("#close-modal").addEventListener("click", () => {
-  document.querySelector(".modal-wrapper").style.display = "none";
-})
+// document.querySelector("#close-modal").addEventListener("click", () => {
+//   document.querySelector(".modal-wrapper").style.display = "none";
+// })
 
-var acc = document.getElementsByClassName("accordion");
+var acc = document.querySelector(".accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -33,3 +33,16 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+setTimeout(function() { 
+  let modal= document.querySelector(".modal-wrapper");
+  modal.classList.add("showModal");
+}, 5000);
+
+ 
+document.querySelector(".close-modal").addEventListener("click", () => {
+  let modal = document.querySelector(".modal-wrapper");
+  modal.classList.remove("showModal");
+})
+
