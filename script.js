@@ -1,15 +1,15 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+// const hamburger = document.querySelector(".hamburger");
+// const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-})
+// hamburger.addEventListener("click", () => {
+//   hamburger.classList.toggle("active");
+//   navMenu.classList.toggle("active");
+// })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}))
+// document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+//   hamburger.classList.remove("active");
+//   navMenu.classList.remove("active");
+// }))
 
 // document.querySelector("#pricing").addEventListener("click", () => {
 //   document.querySelector(".modal-wrapper").style.display = "block";
@@ -19,7 +19,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 //   document.querySelector(".modal-wrapper").style.display = "none";
 // })
 
-var acc = document.querySelector(".accordion");
+var acc = document.querySelectorAll(".accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -45,4 +45,3 @@ document.querySelector(".close-modal").addEventListener("click", () => {
   let modal = document.querySelector(".modal-wrapper");
   modal.classList.remove("showModal");
 })
-

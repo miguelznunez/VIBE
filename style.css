@@ -2,16 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-*,
-*::before,
-*::after{
+*{
   padding: 0;
   margin: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html{
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -39,10 +36,11 @@ body{
   margin: auto; 
 }
 
+
 .modal-wrapper{
   opacity: 0;
   position: fixed;
-  z-index: 2;
+  z-index: -2;
   width: 100%;
   min-height: 100vh;
   overflow-y: scroll;
@@ -50,7 +48,6 @@ body{
   overflow: hidden;
 }
 
-/* ADJUST WIDTH AND HEIGHT ACCORDINGLY */
 .modal{
   position: absolute;
   width: 600px;
@@ -72,7 +69,6 @@ body{
   font-weight: bold;
 }
 
-/* x-icon */
 .close-modal{
   font-size: 2rem;
   position: absolute;
@@ -80,6 +76,7 @@ body{
   right: 3%;
   cursor: pointer;
 }
+
 
 .hideModal{
   z-index:-1;
@@ -104,7 +101,7 @@ body{
 .showModal{
   opacity:1;
   z-index:2;
-  animation: show .2s;
+  animation: show 0.2s;
   transform: scale(1);
 }
 
@@ -119,9 +116,8 @@ body{
     opacity: 1;
     z-index:2;
   }
-}
+} 
 
-/* HEADER / NAVIGATION */
 #header{
   background-color: white;
 }
@@ -275,7 +271,6 @@ body{
   flex-direction: column;
   gap: 50px;
   color: black;
-
 }
 
 .service-box h1{
@@ -336,15 +331,7 @@ body{
   background-color: lightyellow;
 }
 
-.service-learn-more{
-  min-height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
 
-/* PRICING */
 #pricing{
   color: white;
   position: relative;
@@ -426,18 +413,13 @@ body{
   color: black;
 }
 
-/* TESTIMONIALS */
-#testimonials, .instagram{
+
+#testimonials{
   min-height: 500px;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.instagram{
-  color: white;
-  background-color: white;
 }
 
 .testimonials-container, .instagram-container{
@@ -462,36 +444,12 @@ body{
   color: white;
 }
 
-
-.instagram button{
-  border: 1px solid lightgray;
-  padding: 12px;
-  font-family: inherit;
-  font-weight: bold;
-  border-radius: 5px;
-  background-color: lightyellow;
-}
-
-.instagram-header img{
-  cursor: pointer;
-}
-
-.testimonial-boxes, .instagram-boxes{
+.testimonial-boxes{
   display: flex;
   justify-content: space-between;
-
 }
 
-.instagram-boxes{
-  border: none;
-}
-
-.instagram-boxes{
-  width: 100%;
-  justify-content: space-between;
-}
-
-.testimonial-box, .instagram-box{
+.testimonial-box{
   width: 300px;
   height: 300px;
   display: flex;
@@ -507,47 +465,6 @@ body{
   font-weight: 100;
 }
 
-.instagram-box{
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
-}
-/* .one, .two, .three, .four, .five{
-  background-position: center;
-  background-size: cover;
-  background-image: url(/img/1.jpeg);
-} */
-
-/* .two{
-  background-image: url(/img/2.jpeg);
-}
-
-.three{
-  background-image: url(/img/3.jpeg);
-}
-
-.four{
-  background-image: url(/img/4.jpeg);
-}
-
-.five{
-  background-image: url(/img/ba.jpeg);
-} */
-
-.instagram-follow{
-  color: black;
-  letter-spacing: 1px;
-}
-
-i{
-  font-size: 1.2rem;
-}
-
-.fa-quote-left{
-  color: white;
-  font-size: 2rem;
-}
 .testimonial-paragraph, .testimonial-author{
   text-align: center;
   color: white;
@@ -556,9 +473,9 @@ i{
 #products{
   height: auto;
   background: #FFFFFF;
-background: -webkit-radial-gradient(center, #FFFFFF, #FFFFE0);
-background: -moz-radial-gradient(center, #FFFFFF, #FFFFE0);
-background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
+  background: -webkit-radial-gradient(center, #FFFFFF, #FFFFE0);
+  background: -moz-radial-gradient(center, #FFFFFF, #FFFFE0);
+  background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 }
 
 .products-container{
@@ -610,6 +527,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 .product-img{
   width: 100%;
   height: 250px;
+  background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
@@ -622,9 +540,87 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   gap: 5px;
 }
 
-/* .product-description p{
-  font-weight: 600;
-} */
+.instagram{
+   min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: white;
+}
+
+.instagram-container{
+  width: 80%;
+  margin: auto;
+}
+
+.instagram{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.instagram button{
+  border: 1px solid lightgray;
+  padding: 12px;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: lightyellow;
+}
+
+.instagram-header img{
+  cursor: pointer;
+}
+
+.instagram-boxes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.instagram-boxes{
+  border: none;
+}
+
+.instagram-boxes{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.instagram-box{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+  line-height: 1.5;
+  letter-spacing: 1;
+}
+
+.instagram-box{
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+.instagram-follow{
+  color: black;
+  letter-spacing: 1px;
+}
+
+i{
+  font-size: 1.2rem;
+}
+
+.fa-quote-left{
+  color: white;
+  font-size: 2rem;
+}
 
 #about{
   min-height: 720px;
@@ -632,9 +628,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   justify-content: center;
   align-items: center;
   background-color: black;
-
   color: white;
-  
 }
 
 .about-container{
@@ -646,7 +640,6 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   align-items: center;
   flex-direction: column; 
 }
-
 
 .about-header h1{
   font-size: 4rem;
@@ -667,11 +660,8 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 .about-img{
   width: 500px;
   height: 450px;
-  border: 1px solid white;
-  /* background-position: center;
-  background-size: cover; */
-  /* background-image: url(/img/dra.jpeg); */
   position: relative;
+  border: 1px solid white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
@@ -701,6 +691,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 .info p{
   font-weight: 100;
 }
+
 
 #book{
   min-height: 150px;
@@ -754,16 +745,6 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   flex-direction: column;
 }
 
-/* .faq-header h1{
-  font-size: 4rem;
-  font-family: 'Carattere', cursive;
-  font-style: italic;
-  letter-spacing: 3px;
-  text-align: center;
-  color: white;
-} */
-
-/* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   color: white;
   font-weight: 100;
@@ -780,13 +761,11 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   background-color:rgba(0, 0, 0, 0.8);
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   color: black;
-    background-color: lightyellow;
+  background-color: lightyellow;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
   color: white;
@@ -801,14 +780,14 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\02795'; 
   font-size: 12px;
   float: right;
   margin-left: 5px;
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2796"; 
 }
 
 #contact{
@@ -817,6 +796,7 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   justify-content: center;
   align-items: center;
 }
+
 .contact-container{
   width: 80%;
   margin: auto;
@@ -846,20 +826,64 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   justify-content: space-evenly;
 }
 
-
-
 .business-img{
   width: 90%;
   margin: auto;
   height: 300px;
+  border-radius: 5px;
   border: 1px solid white;
   background-position: center;
   background-size: cover;
-  /* background-image: url(https://images.pexels.com/photos/776938/pexels-photo-776938.jpeg?cs=srgb&dl=pexels-daria-shevtsova-776938.jpg&fm=jpg) ; */
 }
 
-.map{
+.form{
   background-color: white;
+}
+
+.contact-form{
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  color: black;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-form input{
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form button{
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  font-family: inherit;
+  background-color: black;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+#contact-message{
+  resize: none;
+  font-family: inherit;
+  height: 300px;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 #footer{
@@ -910,9 +934,12 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
 
 .footer-container a{
   color: white;
-}
+} 
 
-@media(max-width:768px){
+
+
+
+/* @media(max-width:768px){
   .hamburger{
     display: block;
   }
@@ -946,4 +973,4 @@ background: radial-gradient(ellipse at center, #FFFFFF, #FFFFE0);
   .nav-menu.active{
     left: 0;
   }
-}
+} */
