@@ -766,9 +766,11 @@ button.active, .accordion:hover {
   font-size: 12px;
   float: right;
   margin-left: 5px;
+  color: white;
 }
 
 button.active:after {
+  color: white;
   content: "\2796"; 
 }
 
@@ -807,6 +809,12 @@ button.active:after {
   display: flex;
   gap: 15px;
   flex-direction: column;
+}
+
+.business-detail{
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .business-img{
