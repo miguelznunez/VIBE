@@ -802,11 +802,11 @@ button.active:after {
 
 .business-address{
   width: 90%;
-  height: 200px;
+  height: auto;
   margin: auto;
   display: flex;
+  gap: 15px;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .business-img{
@@ -814,9 +814,6 @@ button.active:after {
   margin: auto;
   height: 300px;
   border-radius: 5px;
-  border: 1px solid white;
-  background-position: center;
-  background-size: cover;
 }
 
 .form{
