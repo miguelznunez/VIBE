@@ -21,7 +21,7 @@ li{
 }
 
 a{
-  color: #1a1a1a;
+  color: black;
   text-decoration: none;
 }
 
@@ -35,7 +35,6 @@ body{
   width: 1280px;
   margin: auto; 
 }
-
 
 .modal-wrapper{
   opacity: 0;
@@ -76,7 +75,6 @@ body{
   right: 3%;
   cursor: pointer;
 }
-
 
 .hideModal{
   z-index:-1;
@@ -180,6 +178,7 @@ body{
   margin: 5px auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: black;
 }
 
 /* HOME / SHOWCASE */
@@ -196,7 +195,7 @@ body{
 
 .showcase-overlay{
   width: 100%;
-  height: 720px;
+  min-height: 720px;
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), transparent);
 }
 
@@ -510,7 +509,6 @@ body{
   min-height: 300px;
   font-size: 1.2rem;
   font-weight: 600;
-  
 }
 
 .product-box button{
@@ -528,6 +526,7 @@ body{
 .product-img{
   width: 100%;
   height: 250px;
+  border-radius: 5px;
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
@@ -542,7 +541,7 @@ body{
 }
 
 .instagram{
-   min-height: 500px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -553,14 +552,6 @@ body{
 .instagram-container{
   width: 80%;
   margin: auto;
-}
-
-.instagram{
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .instagram button{
@@ -577,26 +568,15 @@ body{
 }
 
 .instagram-boxes{
-  display: flex;
-  justify-content: space-between;
-}
-
-.instagram-boxes{
-  border: none;
-}
-
-.instagram-boxes{
   width: 100%;
+  display: flex;
+  border: none;
   justify-content: space-between;
 }
 
 .instagram-box{
   width: 300px;
   height: 300px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
   padding: 0 15px;
   line-height: 1.5;
   letter-spacing: 1;
@@ -624,6 +604,7 @@ i{
 }
 
 #about{
+  width: 100%;
   min-height: 720px;
   display: flex;
   justify-content: center;
@@ -634,7 +615,7 @@ i{
 
 .about-container{
   width: 80%;
-  height: 720px;
+  min-height: 720px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -678,7 +659,7 @@ i{
 
 .info{
   width: 500px;
-  height: 500px;
+  min-height: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -810,6 +791,7 @@ i{
   color: white;
   line-height: 1.5;
   display: flex;
+  border-radius: 5px;
   flex-direction: column;
   background-color: black;
 }
@@ -939,9 +921,18 @@ i{
 } 
 
 
+@media(max-width:768px){
+  .container{
+    width: 100%;
+  }
 
+  .showcase-container{
+    width: 95%;
+  }
 
-/* @media(max-width:768px){
+  .navbar{
+    width: 95%;
+  }
   .hamburger{
     display: block;
   }
@@ -962,7 +953,7 @@ i{
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: #262626;
+    background-color: white;
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -975,4 +966,130 @@ i{
   .nav-menu.active{
     left: 0;
   }
-} */
+
+  .social-menu{
+   display: none;
+  }
+
+  .services{
+    width: 95%;
+  }
+
+  .services-group{
+    flex-wrap: wrap;
+  }
+
+  .service-box{
+    width: 100%;
+    margin: auto;
+  }
+
+  .pricing-container{
+    width: 95%;
+    padding: 10px 0;
+  }
+
+  .pricing-container{
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .pricing-box{
+    width: 100%;
+  }
+
+  .testimonials-container{
+    padding: 30px 0;
+    width: 95%;
+  }
+
+  .testimonial-boxes{
+    flex-wrap: wrap;
+  }
+
+  .testimonial-box{
+    width: 100%;
+  }
+
+  .products-container{
+    width: 95%;
+  }
+
+  .product-box{
+    width: 100%;
+  }
+
+  .instagram-container{
+    padding: 20px 0;
+    width: 95%;
+  }
+
+  .instagram-box{
+    width: 100%;
+  }
+
+  .instagram-boxes{
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .about-container{
+    padding: 15px 0;
+    width: 95%;
+  }
+
+  .about-boxes{
+    flex-wrap: wrap;
+  }
+
+  .about-img::before{
+    position: absolute;
+    content: '';
+    right: 30px;
+    top: -30px;
+    border: 10px solid transparent;
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-img{
+    width: 100%;
+    border: 10px solid lightyellow;
+  }
+  
+  .info{
+    width: 100%;
+    gap: 10px;
+  }
+
+  .book-today{
+    width: 95%;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .accordion-container{
+    width: 95%;
+  }
+
+  #faqs{
+    height: auto;
+  }
+
+  .contact-container{
+    width: 95%;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .contact-box{
+    width: 100%;
+  }
+
+  .footer-container{
+    width: 95%;
+  }
+
+  
+}
