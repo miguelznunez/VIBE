@@ -55,7 +55,7 @@ body{
   top: calc(50% - 175px);
   background-position: center;
   background-size: cover;
-  background-image: url(image0.jpeg);
+  background-image: url(vibe_logo.jpeg);
 }
 
 .modal-message{
@@ -186,7 +186,7 @@ body{
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-image: url(er.jpeg);
+  background-image: url(showcase_image.jpeg);
   background-attachment: fixed;
   color: white;   
   position: relative;
@@ -288,7 +288,7 @@ body{
 .brows-img, .waxes-img, .sugaring-img, .lashes-img{
   background-position: center;
   background-size: cover;
-  background-image: url(we.jpeg);
+  background-image: url(brow.jpeg);
   transition: 0.5s;
   cursor: pointer;
 }
@@ -311,15 +311,15 @@ body{
 }
 
 .waxes-img{
-  background-image: url(eg.jpeg);
+  background-image: url(waxing.jpeg);
 }
 
 .sugaring-img{
-  background-image: url(bu.jpeg);
+  background-image: url(sugaring.jpeg);
 }
 
 .lashes-img{
-  background-image: url(ey.jpeg);
+  background-image: url(lashes.jpeg);
 }
 
 .waxes{
@@ -342,7 +342,7 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.1)), url(oth.jpeg);
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.1)), url(yellow_flowers.jpeg);
 }
 
 .pricing-container{
@@ -714,17 +714,14 @@ i{
   position: relative;
   background-position: center;
   background-size: cover;
-  background-image: url(34.jpeg);
+  background-image: url(faqs.jpeg);
   background-attachment: fixed;
 }
 
 .accordion-container{
   width: 80%;
-  height: 700px;
+  height: auto;
   margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
 }
 
 .accordion {
@@ -754,10 +751,13 @@ i{
   background-color:rgba(0, 0, 0, 0.8);
   max-height: 0;
   overflow: hidden;
+    line-height: 1.5;
+  letter-spacing: 1;
   transition: max-height 0.2s ease-out;
 }
 
 .panel p{
+  font-size: 1.2rem;
   font-weight: 100;
 }
 
@@ -926,6 +926,14 @@ i{
     width: 100%;
   }
 
+  .modal{
+    position: absolute;
+    width: 500px;
+    left: calc(50% - 250px);
+    height: 350px;
+    top: calc(50% - 175px);
+  }
+
   .showcase-container{
     width: 95%;
   }
@@ -1065,6 +1073,7 @@ i{
   .book-today{
     width: 95%;
     gap: 10px;
+    text-align: center;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -1091,5 +1100,16 @@ i{
     width: 95%;
   }
 
-  
+}
+
+@media(max-width: 480px){
+  .showcase-text-1{
+    top: 30%;
+  }
+  .showcase-text-2{
+    top: 43%;
+  }
+  .showcase-text-1 h1{
+    font-size: 6rem;
+  }
 }
