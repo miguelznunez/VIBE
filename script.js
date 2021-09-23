@@ -26,6 +26,11 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+document.querySelector(".accordion").addEventListener("click", () => {
+    document.querySelector(".fa-plus").style.display = "none";
+    document.querySelector(".fa-minus").style.display = "block";
+
+})
 
 // setTimeout(function() { 
 //   let modal= document.querySelector(".modal-wrapper");
