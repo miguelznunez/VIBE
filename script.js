@@ -27,13 +27,13 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-setTimeout(function() { 
-  let modal= document.querySelector(".modal-wrapper");
-  modal.classList.add("showModal");
-}, 5000);
+// setTimeout(function() { 
+//   let modal= document.querySelector(".modal-wrapper");
+//   modal.classList.add("showModal");
+// }, 5000);
 
  
-document.querySelector(".close-modal").addEventListener("click", () => {
-  let modal = document.querySelector(".modal-wrapper");
-  modal.classList.remove("showModal");
-})
+// document.querySelector(".close-modal").addEventListener("click", () => {
+//   let modal = document.querySelector(".modal-wrapper");
+//   modal.classList.remove("showModal");
+// })
