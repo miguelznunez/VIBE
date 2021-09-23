@@ -258,8 +258,12 @@ body{
   margin-top: -125px;
 }
 
-.services-group{
+.services-group1, .services-group2, .services-group3{
   display: flex;
+}
+
+.services-group3{
+  display: none;
 }
 
 .service-box{
@@ -1039,8 +1043,16 @@ button.active:after {
     width: 95%;
   }
 
-  .services-group{
+  .services-group1, .services-group2, .services-group3{
     flex-wrap: wrap;
+  }
+
+  .services-group2{
+    display: none;
+  }
+
+  .services-group3{
+    display: block;
   }
 
   .service-box{
