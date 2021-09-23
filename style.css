@@ -298,7 +298,7 @@ body{
   cursor: pointer;
 }
 
-.brows-img:hover, .waxes-img:hover, .sugaring-img:hover, .lashes-img:hover{
+.brows-img:hover, .sugaring-img:hover, .lashes-img:hover{
   box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
 }
 
@@ -392,6 +392,11 @@ body{
   letter-spacing: 3px;
   text-align: center;
   
+}
+
+.product-description button{
+  width: 100%;
+  color: white;
 }
 
 .item{
