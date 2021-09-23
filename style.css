@@ -245,6 +245,12 @@ body{
 }
 
 /* SERVICES */
+
+#services{
+  width: 1280px;
+  margin: auto;
+}
+
 .services{
   width: 80%;
   margin: auto;
@@ -342,6 +348,8 @@ body{
 
 
 #pricing{
+  width: 1280px;
+  margin: auto;
   color: white;
   position: relative;
   min-height: 720px;
@@ -429,6 +437,8 @@ body{
 
 
 #testimonials{
+    width: 1280px;
+  margin: auto;
   min-height: 500px;
   background-color: black;
   display: flex;
@@ -668,7 +678,8 @@ i{
 }
 
 #about{
-  width: 100%;
+    width: 1280px;
+  margin: auto;
   min-height: 720px;
   display: flex;
   justify-content: center;
@@ -746,6 +757,8 @@ i{
 
 
 #book{
+    width: 1280px;
+  margin: auto;
   min-height: 150px;
   background-color: white;
   color: black;
@@ -776,6 +789,8 @@ i{
 }
 
 #faqs{
+    width: 1280px;
+  margin: auto;
   min-height: 720px;
   display: flex;
   justify-content: center;
@@ -847,6 +862,8 @@ i{
 }
 
 #contact{
+    width: 1280px;
+  margin: auto;
   min-height: 720px;
   display: flex;
   justify-content: center;
@@ -947,7 +964,8 @@ i{
 }
 
 #footer{
-  width: 100%;
+    width: 1280px;
+  margin: auto;
   min-height: 300px;
   background-color:black;
   display: flex;
@@ -1008,12 +1026,15 @@ i{
   }
 
   .showcase-container{
-    width: 95%;
+    width: 85%;
   }
 
+  
+
   .navbar{
-    width: 95%;
+    width: 90%;
   }
+
   .hamburger{
     display: block;
   }
@@ -1054,8 +1075,12 @@ i{
    display: none;
   }
 
+  #services{
+    width: 85%;
+  }
+
   .services{
-    width: 95%;
+    width: 100%;
   }
 
   .services-group1, .services-group2, .services-group3{
@@ -1075,8 +1100,12 @@ i{
     margin: auto;
   }
 
+  #pricing{
+    width: 100%;
+  }
+
   .pricing-container{
-    width: 95%;
+    width: 85%;
     padding: 10px 0;
   }
 
@@ -1089,9 +1118,13 @@ i{
     width: 100%;
   }
 
+  #testimonials{
+    width: 100%;
+  }
+
   .testimonials-container{
     padding: 30px 0;
-    width: 95%;
+    width: 85%;
   }
 
   .testimonial-boxes{
@@ -1103,7 +1136,7 @@ i{
   }
 
   .products-container{
-    width: 95%;
+    width: 85%;
   }
 
   .product-box{
@@ -1112,7 +1145,7 @@ i{
 
   .instagram-container{
     padding: 20px 0;
-    width: 95%;
+    width: 85%;
   }
 
   .instagram-box{
@@ -1124,9 +1157,13 @@ i{
     flex-wrap: wrap;
   }
 
+  #about{
+    width: 100%;
+  }
+
   .about-container{
     padding: 15px 0;
-    width: 95%;
+    width: 85%;
   }
 
   .about-boxes{
@@ -1153,34 +1190,55 @@ i{
     gap: 10px;
   }
 
+  #book{
+    width: 100%;
+  }
+
   .book-today{
-    width: 95%;
+    width: 85%;
     gap: 10px;
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
   }
 
+  #faqs{
+    width: 100%;
+  }
+
   .accordion-container{
-    width: 95%;
+    width: 85%;
   }
 
   #faqs{
     height: auto;
   }
 
+  #contact{
+    width: 100%;
+  }
+
   .contact-container{
-    width: 95%;
+    width: 85%;
     flex-wrap: wrap;
     padding: 15px 0;
   }
 
   .contact-box{
     width: 100%;
+    margin: auto;
+  }
+
+  .contact-form{
+    width: 100%;
+  }
+
+  #footer{
+    width: 100%;
   }
 
   .footer-container{
-    width: 95%;
+    width: 85%;
   }
 
 }
@@ -1194,5 +1252,56 @@ i{
   }
   .showcase-text-1 h1{
     font-size: 6rem;
+  }
+   .navbar{
+    width: 95%;
+  }
+
+    .showcase-container{
+      width: 95%;
+    }
+
+
+  #services{
+    width: 95%;
+  }
+  .service-box{
+    width: 100%;
+  }
+
+  .pricing-container{
+    width: 95%;
+  }
+
+ .testimonials-container{
+    width: 95%;
+  }
+
+.products-container{
+    width: 95%;
+  }
+
+ .instagram-container{
+    width: 95%;
+  }
+
+ .about-container{
+    width: 95%;
+  }
+
+ .book-today{
+    width: 95%;
+  }
+
+ .accordion-container{
+    width: 95%;
+  }
+
+  .contact-container{
+    width: 95%;
+  }
+
+  .footer-container{
+    width: 95%;
   }
 }
