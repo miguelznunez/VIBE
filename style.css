@@ -281,6 +281,7 @@ body{
   font-size: 1.2rem;
 }
 
+
 .brows{
   background-color:lightyellow;
 }
@@ -302,6 +303,10 @@ body{
   transform: scale(0);
   transition: .8s;
   font-size: 1.5rem;
+  color: white;
+}
+
+.brows-img a, .waxes-img a, .sugaring-img a, .lashes-img a{
   color: white;
 }
 
