@@ -289,7 +289,7 @@ body{
 .brows-img, .waxes-img, .sugaring-img, .lashes-img{
   background-position: center;
   background-size: cover;
-  background-image: url(brow.jpeg);
+  background-image: url(1.jpeg);
   transition: 0.5s;
   cursor: pointer;
 }
@@ -316,15 +316,15 @@ body{
 }
 
 .waxes-img{
-  background-image: url(waxing.jpeg);
+  background-image: url(2.jpeg);
 }
 
 .sugaring-img{
-  background-image: url(sugaring.jpeg);
+  background-image: url(3.jpeg);
 }
 
 .lashes-img{
-  background-image: url(lashes.jpeg);
+  background-image: url(4.jpeg);
 }
 
 .waxes{
