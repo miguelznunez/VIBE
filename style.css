@@ -819,7 +819,7 @@ i{
 
 .accordion:after {
   content: '\02795';
-  font-size: 13px;
+  font-size: 10px;
   color: transparent;
   text-shadow: 0 0 0 white;
   float: right;
