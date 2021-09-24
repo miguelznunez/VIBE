@@ -359,6 +359,7 @@ body{
   display: flex;
   color: white;
   justify-content: space-between;
+  align-items: center;
 }
 
 .pricing-box{
