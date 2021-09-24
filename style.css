@@ -748,7 +748,7 @@ i{
   margin: auto;
   display: flex;
   color: black;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
