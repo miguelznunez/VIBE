@@ -348,7 +348,7 @@ body{
 
 
 #pricing{
-  width: 1280px;
+  width: 100%;
   margin: auto;
   color: white;
   position: relative;
@@ -437,7 +437,7 @@ body{
 
 
 #testimonials{
-    width: 1280px;
+    width: 100%;
   margin: auto;
   min-height: 500px;
   background-color: black;
@@ -678,7 +678,7 @@ i{
 }
 
 #about{
-    width: 1280px;
+  width: 100%;
   margin: auto;
   min-height: 720px;
   display: flex;
@@ -757,7 +757,7 @@ i{
 
 
 #book{
-    width: 1280px;
+  width: 100%;
   margin: auto;
   min-height: 150px;
   background-color: white;
@@ -789,7 +789,7 @@ i{
 }
 
 #faqs{
-    width: 1280px;
+  width: 100%;
   margin: auto;
   min-height: 720px;
   display: flex;
@@ -862,7 +862,7 @@ i{
 }
 
 #contact{
-    width: 1280px;
+  width: 100%;
   margin: auto;
   min-height: 720px;
   display: flex;
@@ -964,7 +964,7 @@ i{
 }
 
 #footer{
-    width: 1280px;
+  width: 100%;
   margin: auto;
   min-height: 300px;
   background-color:black;
