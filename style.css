@@ -34,6 +34,7 @@ body{
 .container{
   width: 1280px;
   margin: auto; 
+  /* border: 2px solid black; */
 }
 
 .modal-wrapper{
@@ -348,8 +349,8 @@ body{
 
 
 #pricing{
-  width: 100%;
-  margin: auto;
+  /* width: 100%;
+  margin: auto; */
   color: white;
   position: relative;
   min-height: 720px;
