@@ -34,7 +34,6 @@ body{
 .container{
   width: 1280px;
   margin: auto; 
-  /* border: 2px solid black; */
 }
 
 .modal-wrapper{
@@ -292,7 +291,6 @@ body{
   font-size: 1.2rem;
 }
 
-
 .brows{
   background-color:lightyellow;
 }
@@ -302,11 +300,14 @@ body{
   background-size: cover;
   background-image: url(1.jpeg);
   transition: 0.5s;
-  cursor: pointer;
 }
 
 .brows-img:hover, .sugaring-img:hover, .lashes-img:hover{
   box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.brows-img a, .waxes-img a, .sugaring-img a, .lashes-img a{
+  color: white;
 }
 
 .brows-img p, .waxes-img p, .sugaring-img p, .lashes-img p{
@@ -314,10 +315,6 @@ body{
   transform: scale(0);
   transition: .8s;
   font-size: 1.5rem;
-  color: white;
-}
-
-.brows-img a, .waxes-img a, .sugaring-img a, .lashes-img a{
   color: white;
 }
 
@@ -348,15 +345,7 @@ body{
 }
 
 
-#pricing{
-  /* width: 100%;
-  margin: auto; */
-  color: white;
-  position: relative;
-  min-height: 720px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#pricing{ 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -365,8 +354,10 @@ body{
 
 .pricing-container{
   width: 80%;
+  min-height: 720px;
   margin: auto;
   display: flex;
+  color: white;
   justify-content: space-between;
 }
 
@@ -438,13 +429,7 @@ body{
 
 
 #testimonials{
-    width: 100%;
-  margin: auto;
-  min-height: 500px;
   background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .testimonials-container, .instagram-container{
@@ -453,7 +438,7 @@ body{
 }
 
 .testimonial, .instagram{
-  height: auto;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -615,18 +600,18 @@ body{
   text-align: center;
 }
 
-.instagram{
-  min-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+#instagram{
   background-color: white;
 }
 
 .instagram-container{
   width: 80%;
+  min-height: 500px;
   margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 }
 
 .instagram button{
@@ -649,13 +634,14 @@ body{
   justify-content: space-between;
 }
 
-.instagram-box{
+/* .instagram-box{
   width: 300px;
   height: 300px;
   padding: 0 15px;
   line-height: 1.5;
   letter-spacing: 1;
-}
+  border: 1px solid black;
+} */
 
 .instagram-box{
   width: 200px;
@@ -679,14 +665,7 @@ i{
 }
 
 #about{
-  width: 100%;
-  margin: auto;
-  min-height: 720px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
-  color: white;
 }
 
 .about-container{
@@ -694,6 +673,7 @@ i{
   min-height: 720px;
   margin: auto;
   display: flex;
+  color: white;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column; 
@@ -758,19 +738,15 @@ i{
 
 
 #book{
-  width: 100%;
-  margin: auto;
-  min-height: 150px;
   background-color: white;
-  color: black;
-  display: flex;
-  justify-content: center;
 }
 
 .book-today{
   width: 80%;
+   min-height: 150px;
   margin: auto;
   display: flex;
+  color: black;
   justify-content: space-between;
   align-items: center;
 }
@@ -790,14 +766,6 @@ i{
 }
 
 #faqs{
-  width: 100%;
-  margin: auto;
-  min-height: 720px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  position: relative;
   background-position: center;
   background-size: cover;
   background-image: url(faqs.jpeg);
@@ -806,8 +774,11 @@ i{
 
 .accordion-container{
   width: 80%;
-  height: auto;
+  min-height: 720px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accordion {
@@ -862,19 +833,13 @@ i{
   font-weight: 100;
 }
 
-#contact{
-  width: 100%;
-  margin: auto;
+.contact-container{
+  width: 80%;
   min-height: 720px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.contact-container{
-  width: 80%;
-  margin: auto;
-  display: flex;
 }
 
 .contact-box{
@@ -965,23 +930,18 @@ i{
 }
 
 #footer{
-  width: 100%;
-  margin: auto;
-  min-height: 300px;
-  background-color:black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  background-color: black;
 }
 
 .footer-container{
   width: 80%;
+  min-height: 300px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
+  color: white;
   flex-direction: column;
 }
 
@@ -1145,8 +1105,9 @@ i{
   }
 
   .instagram-container{
-    padding: 20px 0;
     width: 85%;
+    gap: 20px;
+    padding: 20px 0;
   }
 
   .instagram-box{
