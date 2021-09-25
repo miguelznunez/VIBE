@@ -186,7 +186,7 @@ body{
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-image: url(showcase_image_big.png);
+  background-image: url(showcase_big.png);
   background-attachment: fixed;
   color: white;   
   position: relative;
@@ -349,7 +349,7 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.1)), url(yellow_flowers_big.png);
+  background-image: url(pricing_big.png);
 }
 
 .pricing-container{
@@ -714,7 +714,7 @@ i{
   content: '';
   right: 30px;
   top: -30px;
-  border: 10px solid white;
+  border: 10px solid lightyellow;
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -769,7 +769,7 @@ i{
 #faqs{
   background-position: center;
   background-size: cover;
-  background-image: url(faqs.jpeg);
+  background-image: url(faqs_big.png);
   background-attachment: fixed;
 }
 
@@ -992,7 +992,7 @@ i{
   }
 
   #pricing{ 
-    background-image: url(yellow_flowers_small.png);
+    background-image: url(pricing_small.png);
   }
 
   .navbar{
@@ -1036,7 +1036,7 @@ i{
   }
 
   .showcase{
-    background-image: url(showcase_image_small.png);
+    background-image: url(showcase_small.png);
   }
 
 
@@ -1174,6 +1174,7 @@ i{
 
   #faqs{
     width: 100%;
+    background-image: url(faqs_small.png);
   }
 
   .accordion-container{
