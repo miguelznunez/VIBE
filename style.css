@@ -1112,6 +1112,10 @@ i{
     width: 100%;
   }
 
+  .product-img{
+    height: 300px;
+  }
+
   .instagram-container{
     width: 85%;
     gap: 20px;
@@ -1120,6 +1124,7 @@ i{
 
   .instagram-box{
     width: 100%;
+    height: 300px;
   }
 
   .instagram-boxes{
