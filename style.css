@@ -186,7 +186,7 @@ body{
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-image: url(showcase_image.jpeg);
+  background-image: url(showcase_image_big.jpeg);
   background-attachment: fixed;
   color: white;   
   position: relative;
@@ -1032,6 +1032,11 @@ i{
   .nav-menu.active{
     left: 0;
   }
+
+  .showcase{
+    background-image: url(showcase_image_small.png);
+  }
+
 
   .social-menu{
    display: none;
