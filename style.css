@@ -984,7 +984,7 @@ i{
 
 
 @media(max-width:768px){
-  .container, .services,  #pricing, .pricing-box,#testimonials,.testimonial-box, .product-box, #about, #book, #contact, .contact-form,  #footer  {
+  .container, .services,  #pricing, .pricing-box,#testimonials,.testimonial-box, .product-box, #about, #book, #contact, .contact-form, #footer  {
     width: 100%;
   }
 
@@ -1189,10 +1189,6 @@ i{
   }
    .navbar, .showcase-container, #services, .pricing-container, .testimonials-container, .products-container, .instagram-container, .about-container, .book-today, .accordion-container, .contact-container, .footer-container {
     width: 95%;
-  }
-
-  .showcase, #faqs{
-    background-attachment: scroll;
   }
  
   .service-box{
