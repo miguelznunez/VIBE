@@ -771,7 +771,7 @@ i{
 }
 
 #faqs{
-   transform:translatez(0);
+  transform:translatez(0);
   background-position: center;
   background-size: cover;
   background-image: url(faqs_big.png);
@@ -1041,6 +1041,8 @@ i{
   }
 
   .showcase{
+    width: 100%;
+    height: 100%;
     background-image: url(showcase_small.png);
   }
 
