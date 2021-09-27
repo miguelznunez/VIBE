@@ -189,8 +189,8 @@ body{
 
   background-position: center;
   background-size: cover;
-  background-image: url(showcase_big.png);
-  background-attachment: fixed;
+  background-image: url(showcase.jpeg); 
+  background-attachment: fixed; 
   color: white;   
   position: relative;
   z-index: -1;
@@ -207,7 +207,7 @@ body{
   width: 80%;
   margin: auto;
   height: 720px;
-  padding: 0 24px;
+  /* padding: 0 24px; */
   position: relative;
 }
 
@@ -246,6 +246,15 @@ body{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.showcase-img{
+  width: 600px;
+  height: 720px;
+  float: right;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url(showcase.jpeg);
 }
 
 /* SERVICES */
@@ -306,7 +315,7 @@ body{
   transition: 0.5s;
 }
 
-.brows-img:hover, .sugaring-img:hover, .lashes-img:hover{
+.brows-img:hover, .waxes-img:hover, .sugaring-img:hover, .lashes-img:hover{
   box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
 }
 
@@ -328,15 +337,15 @@ body{
 }
 
 .waxes-img{
-  background-image: url(3.jpeg);
+  background-image: url(waxing.jpeg);
 }
 
 .sugaring-img{
-  background-image: url(2.jpeg);
+  background-image: url(sugaring.JPG);
 }
 
 .lashes-img{
-  background-image: url(4.jpeg);
+  background-image: url(lashes.jpeg);
 }
 
 .waxes{
@@ -358,17 +367,27 @@ body{
 
 .pricing-container{
   width: 80%;
-  min-height: 720px;
+  min-height: 920px;
   margin: auto;
   display: flex;
   color: white;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
+}
+
+.pricing-boxes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
 }
 
 .pricing-box{
   width: 330px;
-  height: 600px;
+  height: 400px;
   border-radius: 5px;
   background-color: black;
   display: flex;
@@ -387,11 +406,11 @@ body{
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 15px;
 }
 
 .pricing-header h1{
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Carattere', cursive;
   font-style: italic;
   letter-spacing: 3px;
@@ -402,6 +421,10 @@ body{
 .product-description button{
   width: 100%;
   color: white;
+}
+
+.pricing-items{
+  height: 200px;
 }
 
 .item{
@@ -430,59 +453,6 @@ body{
 
 .center a{
   color: black;
-}
-
-
-#testimonials{
-  background-color: black;
-}
-
-.testimonials-container, .instagram-container{
-  width: 80%;
-  margin: auto;
-}
-
-.testimonial, .instagram{
-  min-height: 500px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.testimonial-header h1{
-  font-size: 4rem;
-  font-family: 'Carattere', cursive;
-  font-style: italic;
-  letter-spacing: 3px;
-  text-align: center;
-  color: white;
-}
-
-.testimonial-boxes{
-  display: flex;
-  justify-content: space-between;
-}
-
-.testimonial-box{
-  width: 300px;
-  height: 300px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 15px;
-  line-height: 1.5;
-  letter-spacing: 1;
-}
-
-.testimonial-box q{
-  font-weight: 100;
-}
-
-.testimonial-paragraph, .testimonial-author{
-  text-align: center;
-  color: white;
 }
 
 #products{
@@ -591,12 +561,12 @@ body{
 }
 
 .product-description{
-  height: auto;
+  height: 150px;
   text-align: center;
   padding: 10px;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
-  gap: 10px;
 }
 
 .product-hide{
@@ -636,27 +606,29 @@ body{
   width: 100%;
   display: flex;
   border: none;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-/* .instagram-box{
-  width: 300px;
-  height: 300px;
-  padding: 0 15px;
-  line-height: 1.5;
-  letter-spacing: 1;
-  border: 1px solid black;
-} */
-
 .instagram-box{
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.instagram-box h3{
+  font-size: 2rem;
+}
+
+.optional{
+  color: black;
+    font-size: 2rem;
+  background-color: white;
 }
 
 .instagram-follow{
   color: black;
+
   letter-spacing: 1px;
 }
 
@@ -675,13 +647,20 @@ i{
 
 .about-container{
   width: 80%;
-  min-height: 720px;
+   min-height: 720px;
   margin: auto;
   display: flex;
   color: white;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column; 
+}
+
+.about-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .about-header h1{
@@ -691,15 +670,6 @@ i{
   letter-spacing: 3px;
   text-align: center;
   color: white;
-}
-
-.about-boxes{
-  width: 100%;
-  min-height: 720px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
 }
 
 .about-img{
@@ -724,12 +694,12 @@ i{
   border-radius: 5px;
 }
 
-/* .info{
+.info{
   width: 500px;
   min-height: 500px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   padding: 20px;
   font-size: 1rem;
@@ -739,7 +709,7 @@ i{
 
 .info p{
   font-weight: 100;
-} */
+}
 
 
 #book{
@@ -841,7 +811,7 @@ i{
 
 .contact-container{
   width: 80%;
-  min-height: 720px;
+  min-height: 820px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -849,8 +819,8 @@ i{
 }
 
 .contact-box{
-  width: 550px;
-  height: 600px;
+  width: 100%;
+  min-height: 700px;
   color: white;
   line-height: 1.5;
   display: flex;
@@ -868,12 +838,13 @@ i{
   height: auto;
   margin: auto;
   display: flex;
+  justify-content: space-between;
   gap: 15px;
-  flex-direction: column;
 }
 
 .business-detail{
   display: flex;
+  height: auto;
   align-items: center;
   gap: 15px;
 }
@@ -881,58 +852,11 @@ i{
 .business-img{
   width: 90%;
   margin: auto;
-  height: 300px;
-  border-radius: 5px;
+  height: 500px;
 }
 
 .form{
   background-color: white;
-}
-
-.contact-form{
-  width: 90%;
-  margin: auto;
-  height: 100%;
-  display: flex;
-  color: black;
-  justify-content: space-evenly;
-  flex-direction: column;
-  text-align: center;
-}
-
-.contact-form input{
-  font-weight: bold;
-  font-size: 1.1rem;
-  font-family: inherit;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  background-color: white;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-.contact-form button{
-  cursor: pointer;
-  padding: 10px;
-  color: white;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  font-family: inherit;
-  background-color: black;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-#contact-message{
-  resize: none;
-  font-family: inherit;
-  height: 300px;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  border: 1px solid lightgray;
-  background-color: white;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 #footer{
@@ -1041,7 +965,7 @@ i{
   }
 
   .showcase{
-    background-image: url(showcase_small.png);
+    background-image: url(showcase.jpeg);
   }
 
   .social-menu{
@@ -1079,15 +1003,6 @@ i{
     flex-wrap: wrap;
   }
 
-  .testimonials-container{
-    padding: 30px 0;
-    width: 85%;
-  }
-
-  .testimonial-boxes{
-    flex-wrap: wrap;
-  }
-
   .products-container{
     width: 85%;
   }
@@ -1098,13 +1013,14 @@ i{
 
   .instagram-container{
     width: 85%;
-    gap: 20px;
-    padding: 20px 0;
   }
 
   .instagram-box{
     width: 100%;
-    height: 300px;
+  }
+
+  .instagram-box h3{
+    font-size: 1.5rem;
   }
 
   .instagram-boxes{
@@ -1169,6 +1085,12 @@ i{
   .contact-box{
     width: 100%;
     margin: auto;
+    gap: 10px;
+    padding: 25px 0;
+  }
+
+  .business-address{
+    flex-direction: column;
   }
 
   .footer-container{
@@ -1193,6 +1115,10 @@ i{
  
   .service-box{
     width: 100%;
+  }
+
+  .business-img{
+    height: 300px;
   }
 
 }
