@@ -356,17 +356,32 @@ body{
   background-color: lightyellow;
 }
 
+.services-header{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.services-header h1{
+  font-size: 4rem;
+  font-family: 'Carattere', cursive;
+  font-style: italic;
+  letter-spacing: 4px;
+}
 
 #pricing{ 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-image: url(pricing_big.png);
+    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
 }
 
 .pricing-container{
   width: 80%;
-  min-height: 920px;
+  min-height: auto;
   margin: auto;
   display: flex;
   color: white;
@@ -374,6 +389,7 @@ body{
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  padding: 20px 0;
   align-items: center;
 }
 
