@@ -310,7 +310,7 @@ body{
 .brows-img, .waxes-img, .sugaring-img, .lashes-img{
   background-position: center;
   background-size: cover;
-  background-image: url(1.jpeg);
+  background-image: url(sculpting.png);
   transition: 0.5s;
 }
 
@@ -344,7 +344,7 @@ body{
 }
 
 .lashes-img{
-  background-image: url(lashes.jpeg);
+  background-image: url(lashes.png);
 }
 
 .waxes{
