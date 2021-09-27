@@ -194,7 +194,6 @@ body{
   color: white;   
   position: relative;
   z-index: -1;
-  transform:translatez(0);
 } 
 
 .showcase-overlay{
@@ -741,7 +740,6 @@ i{
 }
 
 #faqs{
-  transform:translatez(0);
   background-position: center;
   background-size: cover;
   background-image: url(faqs_big.png);
