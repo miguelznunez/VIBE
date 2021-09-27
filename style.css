@@ -375,8 +375,7 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(pricing_big.png);
-    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
+  background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
 }
 
 .pricing-container{
@@ -935,8 +934,7 @@ i{
   }
 
   #pricing{ 
-
-       background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
+    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
   }
 
   .navbar{
