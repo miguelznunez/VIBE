@@ -596,7 +596,7 @@ body{
 
 .instagram-container{
   width: 80%;
-  min-height: 500px;
+  min-height: 400px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
