@@ -935,7 +935,8 @@ i{
   }
 
   #pricing{ 
-    background-image: url(pricing_small.png);
+
+       background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
   }
 
   .navbar{
