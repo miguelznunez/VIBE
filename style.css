@@ -755,10 +755,11 @@ i{
 }
 
 #faqs{
-  background-position: center;
+  background-color: whitesmoke;
+  /* background-position: center;
   background-size: cover;
   background-image: url(faqs_big.png);
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .accordion-container{
@@ -785,7 +786,7 @@ i{
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  background-color:rgba(0, 0, 0, 0.8);
+  background-color:black;
 }
 
 .accordion.active, .accordion:hover{
@@ -800,6 +801,7 @@ i{
   text-shadow: 0 0 0 white;
   float: right;
   margin-left: 5px;
+  
 }
 
 .accordion.active:after {
@@ -809,7 +811,7 @@ i{
 .panel {
   padding: 0 18px;
   color: white;
-  background-color:rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   max-height: 0;
   overflow: hidden;
   line-height: 1.5;
@@ -1082,7 +1084,6 @@ i{
   #faqs{
     width: 100%;
     height: auto;
-    background-image: url(faqs_small.png);
   }
 
   .accordion-container{
