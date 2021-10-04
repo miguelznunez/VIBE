@@ -36,86 +36,6 @@ body{
   margin: auto; 
 }
 
-.modal-wrapper{
-  opacity: 0;
-  position: fixed;
-  z-index: -2;
-  width: 100%;
-  min-height: 100vh;
-  overflow-y: scroll;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-}
-
-.modal{
-  position: absolute;
-  width: 600px;
-  left: calc(50% - 300px);
-  height: 350px;
-  top: calc(50% - 175px);
-  background-position: center;
-  background-size: cover;
-  background-image: url(vibe_logo.jpeg);
-}
-
-.modal-message{
-  position: absolute;
-  bottom: 10%;
-  left: 22%;
-}
-
-#code{
-  font-weight: bold;
-}
-
-.close-modal{
-  font-size: 2rem;
-  position: absolute;
-  top: 1%;
-  right: 3%;
-  cursor: pointer;
-}
-
-.hideModal{
-  z-index:-1;
-  opacity:0;
-  animation: hide .25s;
-  transform: scale(0);
-}
-
-@keyframes hide {
-  from{
-    z-index:2;
-    transform: scale(1);
-    opacity:1;
-  }
-  to{
-    z-index:-1;
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
-.showModal{
-  opacity:1;
-  z-index:2;
-  animation: show 0.2s;
-  transform: scale(1);
-}
-
-@keyframes show {
-  from{
-    transform: scale(0);
-    opacity:0;
-    z-index:-1;
-  } 
-  to{
-    transform: scale(1);
-    opacity: 1;
-    z-index:2;
-  }
-} 
-
 #header{
   background-color: white;
 }
@@ -259,33 +179,39 @@ body{
 /* SERVICES */
 
 #services{
-  width: 1280px;
-  margin: auto;
-}
-
-.services{
-  width: 80%;
-  margin: auto;
-  min-height: 620px;
-  background-color: white;
+  width: 100%;
 }
 
 .services-container{
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  min-height: 620px;
+}
+
+.services-content{
+  width: 80%;
+  margin: auto;
+  
+
   margin-top: -125px;
-}
-
-.services-group1, .services-group2, .services-group3{
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.services-group3{
+.sbone, .sbtwo, .sbthree{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sbthree{
   display: none;
 }
 
 .service-box{
-  width: 400px;
+  width: 250px;
   height: 250px;
   display: flex;
   justify-content: center;
@@ -396,7 +322,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .pricing-box{
@@ -497,7 +423,7 @@ body{
 
 .product-boxes{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
 }
@@ -661,7 +587,7 @@ i{
 
 .about-container{
   width: 80%;
-   min-height: 720px;
+  min-height: 720px;
   margin: auto;
   display: flex;
   color: white;
@@ -673,7 +599,8 @@ i{
 .about-boxes{
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -737,6 +664,7 @@ i{
   display: flex;
   color: black;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -921,27 +849,18 @@ i{
   color: white;
 } 
 
-
-@media(max-width:768px){
-  .container, .services,  #pricing, .pricing-box,#testimonials,.testimonial-box, .product-box, #about, #book, #contact, .contact-form, #footer  {
+@media(max-width:1280px){
+  .container{
     width: 100%;
   }
 
-  .modal-wrapper{
-    display: none;
-  }
+}
 
-  .showcase-container{
+@media(max-width:1275px){
+    .navbar{
     width: 85%;
   }
 
-  #pricing{ 
-    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
-  }
-
-  .navbar{
-    width: 90%;
-  }
 
   .hamburger{
     display: block;
@@ -979,33 +898,68 @@ i{
     left: 0;
   }
 
+
+
+  .services-content, .pricing-box, .product-box {
+    width: 60%;
+  }
+
+  
+  .sbtwo{
+    display: none;
+  }
+  
+  .sbthree{
+    display: block;
+  } 
+
+  .service-box{
+    width: 85%;
+    margin: auto;
+  }
+
+  .showcase-container{
+    width: 85%;
+  }
+
+    .about-img::before{
+    position: absolute;
+    content: '';
+    right: 30px;
+    top: -30px;
+    border: 10px solid transparent;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .about-img{
+    border: 10px solid lightyellow;
+  }
+
+
+
+
+}
+
+@media(max-width:768px){
+  .navbar{
+    width: 95%;
+  }
+  .services-content, .pricing-box, .product-box, #contact, .contact-form, #footer {
+    width: 100%;
+  }
+
+  #pricing{ 
+    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
+  }
+
+
   .showcase{
     background-image: url(showcase.jpeg);
   }
 
   .social-menu{
    display: none;
-  }
-
-  #services{
-    width: 85%;
-  }
-
-  .services-group1, .services-group2, .services-group3{
-    flex-wrap: wrap;
-  }
-
-  .services-group2{
-    display: none;
-  }
-
-  .services-group3{
-    display: block;
-  }
-
-  .service-box{
-    width: 100%;
-    margin: auto;
   }
 
   .pricing-container{
@@ -1043,7 +997,6 @@ i{
     flex-wrap: wrap;
   }
 
-
   .about-container{
     padding: 15px 0;
     width: 85%;
@@ -1053,17 +1006,7 @@ i{
     flex-wrap: wrap;
   }
 
-  .about-img::before{
-    position: absolute;
-    content: '';
-    right: 30px;
-    top: -30px;
-    border: 10px solid transparent;
-    width: 100%;
-    height: 100%;
-  }
-
-  .about-img{
+    .about-img{
     width: 100%;
     border: 10px solid lightyellow;
   }
@@ -1114,6 +1057,7 @@ i{
 }
 
 @media(max-width: 480px){
+
   .showcase-text-1{
     top: 30%;
   }
@@ -1123,14 +1067,13 @@ i{
   .showcase-text-1 h1{
     font-size: 6rem;
   }
-   .navbar, .showcase-container, #services, .pricing-container, .testimonials-container, .products-container, .instagram-container, .about-container, .book-today, .accordion-container, .contact-container, .footer-container {
+   .navbar, .showcase-container, .pricing-container, .testimonials-container, .products-container, .instagram-container, .about-container, .book-today, .accordion-container, .contact-container, .footer-container{
     width: 95%;
   }
- 
-  .service-box{
-    width: 100%;
-  }
 
+  .service-box{
+    width: 95%;
+  }
   .business-img{
     height: 300px;
   }
