@@ -451,15 +451,21 @@ body{
 .product-img{
   width: 100%;
   height: 250px;
+  overflow:hidden;
   border-radius: 5px;
   background-color: white;
-  background-position: center;
-  background-size: cover;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
-.p1{
+.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10{
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  background-position: center;
+  background-size: cover;
   background-image: url(p1.jpeg);
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .p2{
@@ -499,6 +505,11 @@ body{
 .p10{
   background-image: url(p10.jpeg);
 }
+
+/* .p1:hover, .p2:hover, .p3:hover, .p4:hover, .p5:hover, .p6:hover, .p7:hover, .p8:hover, .p9:hover, .p10:hover{
+  -webkit-transform: rotate(15deg) scale(1.4);
+	transform: rotate(15deg) scale(1.4);
+} */
 
 .product-description{
   height: 150px;
