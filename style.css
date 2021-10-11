@@ -109,7 +109,7 @@ body{
 
   background-position: center;
   background-size: cover;
-  background-image: url(showcase.jpeg); 
+  background-image: url(showcase_big.jpeg); 
   background-attachment: fixed; 
   color: white;   
   position: relative;
@@ -165,15 +165,6 @@ body{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-.showcase-img{
-  width: 600px;
-  height: 720px;
-  float: right;
-  background-position: center bottom;
-  background-size: cover;
-  background-image: url(showcase.jpeg);
 }
 
 /* SERVICES */
@@ -961,12 +952,12 @@ i{
   }
 
   #pricing{ 
-    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_big.png);
+    background-image: linear-gradient(to top, transparent 35%, black), url(pricing_small.png);
   }
 
 
   .showcase{
-    background-image: url(showcase.jpeg);
+    background-image: url(showcase_small.png);
   }
 
   .social-menu{
