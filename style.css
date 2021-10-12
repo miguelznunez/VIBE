@@ -227,7 +227,7 @@ body{
 .brows-img, .waxes-img, .sugaring-img, .lashes-img{
   background-position: center;
   background-size: cover;
-  background-image: url(sculpting.png);
+  background-image: url(sculpting_big.png);
   transition: 0.5s;
 }
 
@@ -253,15 +253,15 @@ body{
 }
 
 .waxes-img{
-  background-image: url(waxing.jpeg);
+  background-image: url(waxing_big.jpeg);
 }
 
 .sugaring-img{
-  background-image: url(sugaring.JPG);
+  background-image: url(sugaring_big.JPG);
 }
 
 .lashes-img{
-  background-image: url(lashes.png);
+  background-image: url(lashes_big.png);
 }
 
 .waxes{
@@ -1078,6 +1078,22 @@ i{
   }
   .business-img{
     height: 300px;
+  }
+
+  .brows-img{
+    background-image: url(sculpting_small.png);
+  }
+
+  .sugaring-img{
+    background-image: url(sugaring_small.png);
+  }
+
+  .lashes-img{
+    background-image: url(lashes_small.png);
+  }
+
+  .waxes-img{
+    background-image: url(waxing_small.png);
   }
 
 }
