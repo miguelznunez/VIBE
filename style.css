@@ -126,7 +126,6 @@ body{
   width: 80%;
   margin: auto;
   height: 720px;
-  /* padding: 0 24px; */
   position: relative;
 }
 
@@ -436,7 +435,13 @@ body{
   font-size: 1.2rem;
   cursor: pointer;
   background-color: black;
+  transition: 0.5s ease-in;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+.product-box button:hover{
+  color: black;
+  background-color: white;
 }
 
 .product-img{
@@ -496,11 +501,6 @@ body{
 .p10{
   background-image: url(p10.jpeg);
 }
-
-/* .p1:hover, .p2:hover, .p3:hover, .p4:hover, .p5:hover, .p6:hover, .p7:hover, .p8:hover, .p9:hover, .p10:hover{
-  -webkit-transform: rotate(15deg) scale(1.4);
-	transform: rotate(15deg) scale(1.4);
-} */
 
 .product-description{
   height: 150px;
@@ -686,10 +686,6 @@ i{
 
 #faqs{
   background-color: whitesmoke;
-  /* background-position: center;
-  background-size: cover;
-  background-image: url(faqs_big.png);
-  background-attachment: fixed; */
 }
 
 .accordion-container{
