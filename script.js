@@ -32,13 +32,3 @@ document.querySelector(".accordion").addEventListener("click", () => {
 
 })
 
-// setTimeout(function() { 
-//   let modal= document.querySelector(".modal-wrapper");
-//   modal.classList.add("showModal");
-// }, 5000);
-
- 
-// document.querySelector(".close-modal").addEventListener("click", () => {
-//   let modal = document.querySelector(".modal-wrapper");
-//   modal.classList.remove("showModal");
-// })
