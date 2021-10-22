@@ -701,8 +701,18 @@ i{
   min-height: 720px;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
+}
+
+.accordion-header h1{
+  font-size: 4rem;
+  font-family: 'Carattere', cursive;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-align: center;
+  color: black;
 }
 
 .accordion {
@@ -783,19 +793,31 @@ i{
 }
 
 .business-address{
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: auto;
   display: flex;
-  justify-content: space-between;
-  gap: 15px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.business-detail{
+.main-address{
   display: flex;
-  height: auto;
   align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.business-contacts{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.business-contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .business-img{
@@ -862,7 +884,7 @@ i{
 
 }
 
-@media(max-width:1275px){
+@media(max-width:1278px){
     .navbar{
     width: 85%;
   }
@@ -940,6 +962,10 @@ i{
   
   .about-img{
     border: 10px solid lightyellow;
+  }
+
+  .business-contacts{
+    flex-direction: column;
   }
 
 
@@ -1053,6 +1079,7 @@ i{
   }
 
   .business-address{
+    text-align: center;
     flex-direction: column;
   }
 
